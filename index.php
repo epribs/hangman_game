@@ -1,2 +1,2 @@
-<?php include("HTML File");
+<?php include("index.html");
 	?>
