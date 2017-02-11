@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+  background-image: url(../img/bg.jpg);
+  width: auto;
+  height: auto;
+}
+.btn {
+  margin: 10px auto;
+  text-align: center;
+  padding: 10px;
+}
+#wordHolder {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin: auto auto;
+}
+.footerImg {
+   width: auto;
+   height: 300px;
+}
+footer p {
+  color:white;
+}
