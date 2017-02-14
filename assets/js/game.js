@@ -1,4 +1,3 @@
-window.onload = function () {
 
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lives;
@@ -25,7 +24,7 @@ var keyGuess = document.onkeyup =
 		}
 	}
 
-showLives = function (){
+var showLives = function (){
 	score = 0;
 	document.getElementById("lives").innerHTML = "You have " + lives + " lives";
 	document.getElementById("score").innerHTML = score;
@@ -43,7 +42,7 @@ showLives = function (){
 }
 
 
-result = function() {
+var result = function() {
 	wordHolder = document.getElementById("wordHolder");
 	correct = document.createElement("ul");
 
@@ -62,8 +61,6 @@ $(".playBtn").on("click", function(){
 	lives = 9;
 	showLives();
 });
-}
-
 
 
 
