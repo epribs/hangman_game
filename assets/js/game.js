@@ -2,17 +2,19 @@
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var lives;
 var words = ["biscuit", "bender", "hockey", "puck", "stick", "goal"];
+// var wordBank = words.split("");
 var wordHolder;
 var guess;
 var guesses = [];
 var score = 0;
 
-var keyGuess = document.onkeyup =
+var keyGuess = document.onkeyup = check();
 	function check() {
-		for (var i = 0; i < words.length; i++) {
-			if (words[i] === guess) {
-				guesses[i].innerHTML = guess;
-				counter += 1;
+		for (i = 0; i < words.length; i++) {
+			if (words.charAt[i] === guess) {
+				// guesses[i] = guess;
+				// console.log(guesses);
+				// counter += 1;
 			}
 		}
 		var g = (words.indexOf(guess));
@@ -23,6 +25,19 @@ var keyGuess = document.onkeyup =
 			showLives();
 		}
 	}
+
+
+var result = function() {
+	wordHold = document.getElementById("wordHolder");
+	correct = document.createElement("ul");
+	wordHold.appendChild(correct);
+
+	for (var i = 0; i < words.length; i++) {
+		var guess = document.createElement("li");
+		correct.appendChild(guess);
+		guess.setAttribute("class", "guess");
+		guess.innerHTML = "_"};
+}
 
 var showLives = function (){
 	score = 0;
@@ -42,17 +57,6 @@ var showLives = function (){
 }
 
 
-var result = function() {
-	wordHolder = document.getElementById("wordHolder");
-	correct = document.createElement("ul");
-
-	for (var i = 0; i < words.length; i++) {
-		correct.setAttribute("id", "myWord");
-		guess = document.createElement("li");
-		guess.setAttribute("class", "guess");
-		guess.innerHTML = "_"};
-}
-
 $(".playBtn").on("click", function(){
 	words = words[Math.floor(Math.random() * words.length)];
 	// chosenWord = words[chooseWord];
@@ -60,6 +64,8 @@ $(".playBtn").on("click", function(){
 	guesses = [];
 	lives = 9;
 	showLives();
+	result();
+
 });
 
 
