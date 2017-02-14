@@ -54,7 +54,7 @@ var result = function() {
 }
 
 $(".playBtn").on("click", function(){
-	words = words[Math.floor(Math.random() * (words.length - 1))];
+	words = words[Math.floor(Math.random() * words.length)];
 	// chosenWord = words[chooseWord];
 	console.log(words);
 	guesses = [];
