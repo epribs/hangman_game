@@ -10,13 +10,13 @@
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
 </head>
 <body>
 	<div class="jumbotron">
     <h1 class="text-center">Hockey Hangman</h1>
     <h3 class="text-center">Guess The Letters</h3>
-    
+
 	</div>
 	<div class="container">
 		<div class="row">
@@ -25,7 +25,7 @@
 		<div class="row">
 			<div class="col-md-6">
 				<div class="row">
-					<div class="btn btn-primary playBtn">New Game</div>
+					<div id="playBtn" class="btn btn-primary">New Game</div>
 				</div>
 				<div class="row">
 					<div class="panel panel-default">
@@ -39,21 +39,21 @@
 						<div class="panel-body text-center" id="score"></div>
 					</div>
 				</div>
-					
+
 			</div>
 			<div class="col-md-6">
-				<div id="wordHolder">
-					* * * *
+				<div>
+					<ul id="wordHolder"></ul>
 				</div>
 			</div>
 		</div>
-		
+
 	</div>
 	<footer>
 		<p class="text-center">&copy;2017 Eric Pribramsky</p>
 		<div class="row">
 			<div class="col-md-6">
-				<img class="footerImg" src="assets/img/hockey-player.png" alt="">
+				<!-- <img class="footerImg" src="assets/img/hockey-player.png" alt=""> -->
 			</div>
 			<div class="col-md-6">
 			</div>
@@ -62,5 +62,10 @@
 
 
 	<script type="text/javascript" src="assets/js/game.js"></script>
+	<script>
+	document.getElementById("playBtn").onclick = function(){
+    playGame()
+	};
+	</script>
 </body>
 </html>

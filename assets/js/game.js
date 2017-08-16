@@ -1,24 +1,66 @@
-
+// Creating Dictionary
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-var lives;
+
+// Words to choose from
 var words = ["biscuit", "bender", "hockey", "puck", "stick", "goal"];
+var chosenWord;
+// Lives to start
+var lives = 9;
+
+// Word Holder UL
+var wordHolder = document.getElementById("wordHolder");
+var li = document.createElement("li");
+
+
+
+// Play the Game
+function playGame(){
+		// Choose a word
+		chosenWord = words[Math.floor(Math.random() * words.length)];
+		//console.log(chosenWord);
+
+		// Send word to blanks
+		answerBank(chosenWord);
+
+
+		// guesses = [];
+		// lives = 9;
+		// showLives();
+		// result();
+}
+
+// Create the blanks
+function answerBank(chosenWord) {
+	var lettersArr = chosenWord.split("");
+	var blanks = lettersArr.map(function(i){
+			return "_";
+	});
+	console.log(blanks);
+	for (var i = 0; i < lettersArr.length; i++){
+		console.log(lettersArr[i]);
+		// var wordHolder = document.getElementById("wordHolder");
+		var li = document.createElement("li");
+		wordHolder.appendChild(li);
+		li.setAttribute('data-key', i)
+		li.innerHTML = blanks[i];
+	}
+}
+
+function guess(key){
+
+}
+
+/*
+
 var word;
 // var wordBank = words.split("");
-var wordHold;
+var wordHold = document.getElementById("wordHolder")
 var guess;
 var guesses = [];
 var score = 0;
 var counter = 0;
 
-$(".playBtn").on("click", function(){
-	word = words[Math.floor(Math.random() * words.length)];
-	// chosenWord = words[chooseWord];
-	console.log(word);
-	guesses = [];
-	lives = 9;
-	showLives();
-	result();
-});
+
 
 document.onkeyup = function(event) {
 	var guess = String.fromCharCode(event.keyCode).toLowerCase();
@@ -75,3 +117,5 @@ var showLives = function (){
 	  }
 	}
 }
+
+*/
